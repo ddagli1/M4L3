@@ -58,8 +58,8 @@ def login():
                 error = 'Incorrect login or password'
                 return render_template('login.html', error=error)
 
-    error = 'Incorrect login or password'
-    return render_template('login.html', error=error)
+   
+    return render_template('login.html')
 
 
 
