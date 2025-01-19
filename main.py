@@ -54,7 +54,9 @@ def login():
             #Görev #4. Kullanıcıyı yetkilendir
             if form_login == user.login and form_password == user.password:
                 return redirect('/index')  # Giriş başarılıysa yönlendirme yap
-        
+	    else:
+    		error = 'Incorrect login or password'
+    			return render_template('login.html', error=error)
         # Eğer hiçbir kullanıcı eşleşmezse hata mesajı
         error = 'Hatalı giriş veya şifre'
 
